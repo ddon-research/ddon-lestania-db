@@ -2,7 +2,8 @@
 
 import {useTranslations} from 'next-intl';
 import {useEffect} from 'react';
-import PageLayout from 'components/PageLayout';
+import Navbar from "../../components/Navbar";
+import Box from "@mui/material/Box";
 
 type Props = {
     error: Error;
@@ -17,8 +18,9 @@ export default function Error({error, reset}: Props) {
     }, [error]);
 
     return (
-        <PageLayout title={t('title')}>
-            <div>
+        <>
+            <Navbar/>
+            <Box>
                 {t.rich('description', {
                     p: (chunks) => <p>{chunks}</p>,
                     retry: (chunks) => (
@@ -30,7 +32,7 @@ export default function Error({error, reset}: Props) {
                         </button>
                     )
                 })}
-            </div>
-        </PageLayout>
+            </Box>
+        </>
     );
 }

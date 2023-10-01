@@ -17,7 +17,7 @@
     "@mui/x-data-grid": "latest",
     "@mui/x-tree-view": "latest",
     "next": "latest",
-    "next-intl": "^2.20.2",
+    "next-intl": "latest",
     "react": "latest",
     "react-dom": "latest"
   },

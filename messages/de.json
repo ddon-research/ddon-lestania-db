@@ -8,8 +8,9 @@
     "description": "<p>Es ist leider ein Problem aufgetreten.</p><p>Du kannst versuchen <retry>diese Seite neu zu laden</retry>.</p>"
   },
   "NotFoundPage": {
-    "title": "Seite nicht gefunden",
-    "description": "Bitte überprüfe die Addressleiste deines Browsers oder verwende die Navigation um zu einer bekannten Seite zu wechseln."
+    "title": "404 Nicht Gefunden - Der Server kann die angeforderte Ressource nicht finden",
+    "description": "Probiere eine andere Seite aus oder gehe zurück zur Hauptseite.",
+    "buttonText": "Zurück gehen"
   },
   "LocaleSwitcher": {
     "label": "Sprache ändern",
@@ -20,5 +21,19 @@
     "job": "Klasse",
     "character": "Charakter",
     "settings": "Einstellungen"
+  },
+  "PageLayout": {
+    "links": {
+      "docs": {
+        "title": "Dokumentation",
+        "description": "Erfahre mehr über LestaniaDB in der offiziellen Dokumentation.",
+        "href": "https://github.com/"
+      },
+      "source": {
+        "title": "Quellcode",
+        "description": "Sieh dir den Quellcode auf GitHub an.",
+        "href": "https://github.com/"
+      }
+    }
   }
 }
