@@ -1,12 +1,12 @@
-import {createTheme} from '@mui/material/styles';
-import {coelacanth} from "../../fonts";
+import {createTheme, Theme} from '@mui/material/styles';
+import {eb_garamond} from "../../fonts";
 
-const theme = createTheme({
+const theme: Theme = createTheme({
     palette: {
         mode: 'dark',
     },
     typography: {
-        fontFamily: coelacanth.style.fontFamily,
+        fontFamily: eb_garamond.style.fontFamily,
     },
     components: {
         MuiAlert: {
