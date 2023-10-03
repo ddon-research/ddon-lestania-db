@@ -7,7 +7,7 @@ import LeftVerticalMenu from "../../../components/LeftVerticalMenu";
 import {DRAWER_WIDTH} from "../../../constants";
 import RichTable from "../../../components/RichTable";
 
-export default function CharacterPage() {
+export default function MonsterPage() {
     return (
         <>
             <Navbar/>

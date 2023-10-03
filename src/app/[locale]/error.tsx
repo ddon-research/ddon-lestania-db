@@ -10,8 +10,8 @@ type Props = {
     reset(): void;
 };
 
-export default function Error({error, reset}: Props) {
-    const t = useTranslations('Error');
+export default function ErrorPage({error, reset}: Props) {
+    const t = useTranslations('ErrorPage');
 
     useEffect(() => {
         console.error(error);
@@ -20,7 +20,15 @@ export default function Error({error, reset}: Props) {
     return (
         <>
             <Navbar/>
-            <Box>
+            <Box
+                component="main"
+                sx={{
+                    flexGrow: 1,
+                    bgcolor: 'background.default',
+                    mt: ['48px', '56px', '64px'],
+                    p: 3,
+                }}
+            >
                 {t.rich('description', {
                     p: (chunks) => <p>{chunks}</p>,
                     retry: (chunks) => (

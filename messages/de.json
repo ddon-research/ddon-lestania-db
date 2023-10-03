@@ -3,7 +3,7 @@
     "title": "LestaniaDB",
     "description": "A Dragon's Dogma Online database."
   },
-  "Error": {
+  "ErrorPage": {
     "title": "Etwas ist schief gelaufen!",
     "description": "<p>Es ist leider ein Problem aufgetreten.</p><p>Du kannst versuchen <retry>diese Seite neu zu laden</retry>.</p>"
   },
@@ -16,11 +16,17 @@
     "label": "Sprache ändern",
     "locale": "{locale, select, de {Deutsch} en {Englisch} other {Unbekannt}}"
   },
-  "VerticalMenu": {
-    "search": "Suche",
-    "job": "Klasse",
-    "character": "Charakter",
-    "settings": "Einstellungen"
+  "LeftVerticalMenu": {
+    "header": {
+      "search": "Suche",
+      "vocation": "Laufbahnen",
+      "character": "Charaktere",
+      "monster": "Monster",
+      "item": "Gegenstände"
+    },
+    "footer": {
+      "settings": "Einstellungen"
+    }
   },
   "PageLayout": {
     "links": {
@@ -34,6 +40,24 @@
         "description": "Sieh dir den Quellcode auf GitHub an.",
         "href": "https://github.com/"
       }
+    }
+  },
+  "VocationPage": {
+    "fighter": {
+      "name": "Kämpfer",
+      "shortDescription": "Eine Laufbahn, die ein Gleichgewicht zwischen Angriff und Verteidigung hat. Bewaffnet mit Schwert und Schild."
+    },
+    "hunter": {
+      "name": "Jäger",
+      "shortDescription": "Eine Laufbahn, die aus der Ferne präzisen Schaden anrichten kann. Bewaffnet mit einem Bogen und in der Lage, spezielle Pfeile zu benutzen."
+    },
+    "priest": {
+      "name": "Priester",
+      "shortDescription": "Eine Laufbahn, die die Gruppe mit Genesungs- und Unterstützungsmagie unterstützt. Bewaffnet mit Stab."
+    },
+    "shieldsage": {
+      "name": "Schildmagier",
+      "shortDescription": "Eine Laufbahn, die sich auf Verteidigung und begrenzte Elementarmagie-Unterstützung spezialisiert, die die Aufmerksamkeit des Feindes von den anderen Gruppenmitgliedern ablenken kann. Bewaffnet mit Großschild."
     }
   }
 }

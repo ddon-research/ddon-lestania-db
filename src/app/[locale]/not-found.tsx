@@ -23,12 +23,20 @@ export default function NotFoundPage() {
     return (
         <>
             <Navbar/>
-            <Box mt={15}>
-                <Typography variant="h3" align="center" m={5} fontFamily={noto_serif.style.fontFamily}>
+            <Box
+                component="main"
+                sx={{
+                    flexGrow: 1,
+                    bgcolor: 'background.default',
+                    mt: ['48px', '56px', '64px'],
+                    p: 3,
+                }}
+            >
+                <Typography variant="h3" align="center" fontFamily={noto_serif.style.fontFamily}>
                     {t('title')}
                 </Typography>
                 <Divider/>
-                <Typography variant="body1" align="center" m={2} fontFamily={noto_serif.style.fontFamily}>
+                <Typography variant="body1" align="center" fontFamily={noto_serif.style.fontFamily}>
                     {t('description')}
                 </Typography>
                 <Box sx={{

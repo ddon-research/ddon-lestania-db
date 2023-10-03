@@ -3,7 +3,7 @@
     "title": "LestaniaDB",
     "description": "A Dragon's Dogma Online database."
   },
-  "Error": {
+  "ErrorPage": {
     "title": "Something went wrong!",
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
   },
@@ -16,11 +16,17 @@
     "label": "Change language",
     "locale": "{locale, select, de {German} en {English} other {Unknown}}"
   },
-  "VerticalMenu": {
-    "search": "Search",
-    "job": "Job",
-    "character": "Character",
-    "settings": "Settings"
+  "LeftVerticalMenu": {
+    "header": {
+      "search": "Search",
+      "vocation": "Vocations",
+      "character": "Characters",
+      "monster": "Monsters",
+      "item": "Items"
+    },
+    "footer": {
+      "settings": "Settings"
+    }
   },
   "PageLayout": {
     "links": {
@@ -34,6 +40,24 @@
         "description": "Browse the source code of on GitHub.",
         "href": "https://github.com/"
       }
+    }
+  },
+  "VocationPage": {
+    "fighter": {
+      "name": "Fighter",
+      "shortDescription": "A vocation that has balanced offence and defence. Armed with Sword and Shield."
+    },
+    "hunter": {
+      "name": "Hunter",
+      "shortDescription": "A vocation that can deal precise damage from a distance. Armed with Bow and able to use special arrows."
+    },
+    "priest": {
+      "name": "Priest",
+      "shortDescription": "A vocation that supports the party with recovery and support magick. Armed with Staff."
+    },
+    "shieldsage": {
+      "name": "Shield Sage",
+      "shortDescription": "A vocation that specialises in defence and limited elemental magick support that can attract enemy attention away from other party members. Armed with Greatshield."
     }
   }
 }

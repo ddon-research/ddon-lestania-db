@@ -4,18 +4,20 @@ import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import {noto_serif} from "../fonts";
 import * as React from "react";
+import {APP_VERSION} from "../constants";
 
 export default function Navbar() {
     return (
-        <AppBar position="fixed" sx={{zIndex: 2000,}}>
+        <AppBar position="fixed" sx={{
+            zIndex: 2000
+        }}>
             <Toolbar sx={{
-                // backgroundColor: 'background.paper'
-                backgroundImage: "url('/images/official/headerVisual_bg.png')",
+                backgroundImage: "url('/images/lestania-db/background/headerVisual_bg.png')",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "auto"
             }}>
-                <Image src='/images/official/logo/logo_ddo.png' width="67" height="38" alt="Logo"/>
+                <Image src='/images/lestania-db/logo/logo_ddo.png' width="67" height="38" alt="Logo"/>
                 <Typography variant="h5" color="transparent"
                             sx={{
                                 background: "linear-gradient(to bottom, #bebebe, #887746)",
@@ -29,7 +31,7 @@ export default function Navbar() {
                     ver.
                 </Typography>
                 <Typography color="white" fontFamily={noto_serif.style.fontFamily} fontStyle="italic">
-                    β
+                    β ({APP_VERSION})
                 </Typography>
             </Toolbar>
         </AppBar>

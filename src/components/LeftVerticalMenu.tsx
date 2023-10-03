@@ -1,5 +1,4 @@
 import Drawer from "@mui/material/Drawer";
-import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -14,8 +13,10 @@ import {useTranslations} from 'next-intl';
 
 const HEADER_LINKS = [
     {key: 'search', href: '/'},
-    {key: 'job', href: '/job'},
-    {key: 'character', href: '/character'}
+    {key: 'vocation', href: '/vocation'},
+    {key: 'character', href: '/character'},
+    {key: 'monster', href: '/monster'},
+    {key: 'item', href: '/item'}
 ];
 
 const FOOTER_LINKS = [
@@ -23,10 +24,8 @@ const FOOTER_LINKS = [
 ];
 
 export default function LeftVerticalMenu() {
-    const translations = useTranslations('VerticalMenu');
-
-    let menuHeaderLinks = HEADER_LINKS;
-    let menuFooterLinks = FOOTER_LINKS;
+    const tHeader = useTranslations('LeftVerticalMenu.header');
+    const tFooter = useTranslations('LeftVerticalMenu.footer');
 
     return (
         <Drawer
@@ -44,12 +43,11 @@ export default function LeftVerticalMenu() {
             variant="permanent"
             anchor="left"
         >
-            <Divider/>
             <List>
-                {menuHeaderLinks.map(({key, href}) => (
+                {HEADER_LINKS.map(({key, href}) => (
                     <ListItem key={href} disablePadding>
                         <ListItemButton component={Link} href={href}>
-                            <ListItemText primary={translations(key)}
+                            <ListItemText primary={tHeader(key)}
                                           primaryTypographyProps={{
                                               style: {
                                                   textTransform: 'uppercase'
@@ -59,15 +57,19 @@ export default function LeftVerticalMenu() {
                     </ListItem>
                 ))}
             </List>
-            <Divider sx={{mt: 'auto'}}/>
-            <List>
-                {menuFooterLinks.map(({key, icon: Icon}) => (
+            <List sx={{mt: 'auto'}}>
+                {FOOTER_LINKS.map(({key, icon: Icon}) => (
                     <ListItem key={key} disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
                                 <Icon/>
                             </ListItemIcon>
-                            <ListItemText primary={translations(key)}/>
+                            <ListItemText primary={tFooter(key)}
+                                          primaryTypographyProps={{
+                                              style: {
+                                                  textTransform: 'uppercase'
+                                              }
+                                          }}/>
                         </ListItemButton>
                     </ListItem>
                 ))}
