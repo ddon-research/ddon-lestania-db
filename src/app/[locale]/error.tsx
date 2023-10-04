@@ -5,6 +5,13 @@ import {useEffect} from 'react';
 import Navbar from "../../components/Navbar";
 import Box from "@mui/material/Box";
 
+export const ErrorPageBoxStyle = {
+    flexGrow: 1,
+    bgcolor: 'background.default',
+    mt: ['48px', '56px', '64px'],
+    p: 3
+};
+
 type Props = {
     error: Error;
     reset(): void;
@@ -20,15 +27,7 @@ export default function ErrorPage({error, reset}: Props) {
     return (
         <>
             <Navbar/>
-            <Box
-                component="main"
-                sx={{
-                    flexGrow: 1,
-                    bgcolor: 'background.default',
-                    mt: ['48px', '56px', '64px'],
-                    p: 3,
-                }}
-            >
+            <Box component="main" sx={ErrorPageBoxStyle}>
                 {t.rich('description', {
                     p: (chunks) => <p>{chunks}</p>,
                     retry: (chunks) => (

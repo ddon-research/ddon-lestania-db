@@ -6,7 +6,9 @@ import ThemeRegistry from "../../components/ThemeRegistry/ThemeRegistry";
 
 type Props = {
     children: ReactNode;
-    params: { locale: string };
+    params: {
+        locale: string
+    };
 };
 
 async function getMessages(locale: string) {

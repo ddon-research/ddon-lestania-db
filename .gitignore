@@ -238,3 +238,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/react,windows,nextjs,linux,intellij+all,webstorm+all
+/public/images/official/

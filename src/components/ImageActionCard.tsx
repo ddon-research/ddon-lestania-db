@@ -14,24 +14,28 @@ export type ImageActionCardProps = {
     imageUrl: string
 };
 
+const ImageActionCardStyle = {
+    maxWidth: 320
+};
+
+const ImageActionCardImageStyle = {
+    maxWidth: '50%',
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    height: 'auto',
+    width: 'auto'
+};
+
 export default function ImageActionCard({heading, text, headingIconUrl, imageUrl}: ImageActionCardProps) {
     return (
-        <Card sx={{
-            maxWidth: 320
-        }}>
+        <Card sx={ImageActionCardStyle}>
             <CardActionArea>
                 <CardMedia
                     component="img"
                     image={imageUrl}
                     alt="Image"
-                    style={{
-                        maxWidth: '50%',
-                        display: 'block',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
-                        height: 'auto',
-                        width: 'auto'
-                    }}
+                    sx={ImageActionCardImageStyle}
                 />
                 <CardContent>
                     <Stack direction="row" spacing={2}>
