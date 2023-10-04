@@ -2,10 +2,10 @@
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Navbar from "../../../components/Navbar";
-import LeftVerticalMenu from "../../../components/LeftVerticalMenu";
-import {DRAWER_WIDTH} from "../../../constants";
-import RichTable from "../../../components/RichTable";
+import Navbar from "@/components/Navbar";
+import LeftVerticalMenu from "@/components/LeftVerticalMenu";
+import {DRAWER_WIDTH} from "@/constants";
+import RichTable from "@/components/RichTable";
 
 export default function CharacterPage() {
     return (

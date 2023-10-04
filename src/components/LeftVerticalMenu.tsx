@@ -8,7 +8,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import * as React from "react";
 import SettingsIcon from "@mui/icons-material/Settings";
 import {useTranslations} from 'next-intl';
-import {DRAWER_WIDTH} from "../constants";
+import {DRAWER_WIDTH} from "@/constants";
 
 const LeftVerticalMenuDrawerStyle = {
     width: DRAWER_WIDTH,
@@ -29,7 +29,6 @@ const LeftVerticalMenuListItemStyle = {
 const LeftVerticalMenuFooterListStyle = {
     mt: 'auto'
 };
-
 
 const HEADER_LINKS = [
     {key: 'search', href: '/'},

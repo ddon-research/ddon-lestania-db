@@ -2,7 +2,7 @@
 
 import {useTranslations} from 'next-intl';
 import {useEffect} from 'react';
-import Navbar from "../../components/Navbar";
+import Navbar from "@/components/Navbar";
 import Box from "@mui/material/Box";
 
 export const ErrorPageBoxStyle = {

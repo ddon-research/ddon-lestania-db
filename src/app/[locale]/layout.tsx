@@ -2,7 +2,7 @@ import * as React from 'react';
 import {ReactNode} from 'react';
 import {createTranslator, NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
-import ThemeRegistry from "../../components/ThemeRegistry/ThemeRegistry";
+import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 
 type Props = {
     children: ReactNode;
@@ -13,7 +13,7 @@ type Props = {
 
 async function getMessages(locale: string) {
     try {
-        return (await import(`../../../messages/${locale}.json`)).default;
+        return (await import(`@/messages/${locale}.json`)).default;
     } catch (error) {
         notFound();
     }

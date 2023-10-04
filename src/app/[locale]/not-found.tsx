@@ -6,8 +6,8 @@ import {useRouter} from "next/navigation";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import {noto_serif} from "../../fonts";
-import Navbar from "../../components/Navbar";
+import {noto_serif} from "@/fonts";
+import Navbar from "@/components/Navbar";
 
 const NotFoundPageBoxStyle = {
     flexGrow: 1,
@@ -27,10 +27,6 @@ const NotFoundPageButtonBoxStyle = {
 
 export default function NotFoundPage() {
     const router = useRouter();
-
-    const handleClick = () => {
-        router.push('/');
-    };
     const t = useTranslations('NotFoundPage');
 
     return (
@@ -45,7 +41,7 @@ export default function NotFoundPage() {
                     {t('description')}
                 </Typography>
                 <Box sx={NotFoundPageButtonBoxStyle}>
-                    <Button onClick={handleClick} variant='contained'>{t('buttonText')}</Button>
+                    <Button onClick={() => router.push('/')} variant='contained'>{t('buttonText')}</Button>
                 </Box>
             </Box>
         </>

@@ -1,5 +1,5 @@
 import {createTheme, Theme} from '@mui/material/styles';
-import {eb_garamond} from "../../fonts";
+import {eb_garamond} from "@/fonts";
 
 const theme: Theme = createTheme({
     palette: {

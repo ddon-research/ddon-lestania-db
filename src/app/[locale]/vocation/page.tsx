@@ -1,14 +1,15 @@
 'use client';
 
 import * as React from 'react';
+import {Suspense} from 'react';
 import Box from '@mui/material/Box';
-import Navbar from "../../../components/Navbar";
-import LeftVerticalMenu from "../../../components/LeftVerticalMenu";
+import Navbar from "@/components/Navbar";
+import LeftVerticalMenu from "@/components/LeftVerticalMenu";
 import Stack from '@mui/material/Stack';
-import ImageActionCard from "../../../components/ImageActionCard";
+import ImageActionCard from "@/components/ImageActionCard";
 import {useTranslations} from "next-intl";
-
-import {DRAWER_WIDTH} from "../../../constants";
+import {DRAWER_WIDTH} from "@/constants";
+import {vocations} from "@/util/vocations";
 
 const VocationPageCardBoxStyle = {
     display: 'flex',
@@ -23,30 +24,6 @@ const VocationPageBoxStyle = {
     p: 3
 };
 
-
-const vocationMap = [
-    {
-        vocation: 'fighter',
-        headingIconUrl: '/images/lestania-db/job/icon-job_fighter.png',
-        imageUrl: '/images/lestania-db/job/job_fighter.png'
-    },
-    {
-        vocation: 'hunter',
-        headingIconUrl: '/images/lestania-db/job/icon-job_hunter.png',
-        imageUrl: '/images/lestania-db/job/job_hunter.png'
-    },
-    {
-        vocation: 'priest',
-        headingIconUrl: '/images/lestania-db/job/icon-job_priest.png',
-        imageUrl: '/images/lestania-db/job/job_priest.png'
-    },
-    {
-        vocation: 'shieldsage',
-        headingIconUrl: '/images/lestania-db/job/icon-job_shieldsage.png',
-        imageUrl: '/images/lestania-db/job/job_shieldsage.png'
-    },
-];
-
 export default function VocationPage() {
     const translations = useTranslations('VocationPage');
 
@@ -56,17 +33,19 @@ export default function VocationPage() {
             <LeftVerticalMenu/>
             <Box component="main" sx={VocationPageBoxStyle}>
                 <Box sx={VocationPageCardBoxStyle}>
-                    <Stack spacing={2}>
-                        {vocationMap.map(({vocation, headingIconUrl, imageUrl}) => (
-                            <ImageActionCard
-                                key={vocation}
-                                heading={translations(`${vocation}.name`)}
-                                headingIconUrl={headingIconUrl}
-                                text={translations(`${vocation}.shortDescription`)}
-                                imageUrl={imageUrl}
-                            />
-                        ))}
-                    </Stack>
+                    <Suspense fallback={<p>Loading vocations...</p>}>
+                        <Stack spacing={2}>
+                            {vocations.map(({vocation, headingIconUrl, imageUrl}) => (
+                                <ImageActionCard
+                                    key={vocation}
+                                    heading={translations(`${vocation}.name`)}
+                                    headingIconUrl={headingIconUrl}
+                                    text={translations(`${vocation}.shortDescription`)}
+                                    imageUrl={imageUrl}
+                                />
+                            ))}
+                        </Stack>
+                    </Suspense>
                 </Box>
             </Box>
         </>

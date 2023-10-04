@@ -3,8 +3,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import {APP_VERSION} from "../constants";
-import {noto_serif} from "../fonts";
+import {APP_VERSION} from "@/constants";
+import {noto_serif} from "@/fonts";
 
 const NavbarStyle = {
     zIndex: 2000

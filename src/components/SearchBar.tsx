@@ -3,8 +3,8 @@ import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
-import theme from "./ThemeRegistry/theme";
-import {noto_serif} from "../fonts";
+import theme from "@/components/ThemeRegistry/theme";
+import {noto_serif} from "@/fonts";
 
 const SearchBarBoxStyle = {
     display: 'flex',
